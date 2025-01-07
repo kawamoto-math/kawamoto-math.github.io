@@ -1,0 +1,691 @@
+﻿/*
+	base 		基本設定				
+*/
+:root {
+  	--main-text: 		#333;
+  	--main-bg: 		#fff;
+	--main-a:		#000080;
+	--main-av:		#708090; 
+	--main-ah:		#0000CD;
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+   		--main-text: 	#ddd;
+    		--main-bg: 	#000;
+		--main-a:	#3cb371;
+		--main-av:	#008000; 
+		--main-ah:	#7FFF00; 
+ 	}
+}
+/* -----------------------------------------------------------
+	body 		ボディ
+   ----------------------------------------------------------- */
+body{	
+	color: 			var(--main-text);
+  	background-color: 	var(--main-bg);
+	line-height :		1.5;
+	margin :		50px 100px 50px 50px;
+	padding :		0px 0px 950px 0px ;
+	font-family: 		'Times New Roman','Arial','メイリオ', Meiryo,'ヒラギノ角ゴシック','Hiragino Sans','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+}
+/* -----------------------------------------------------------
+	headline 	見出し
+   ----------------------------------------------------------- */
+h2{
+	padding-left : 		5px;
+	border-bottom-style : 	double;
+	border-bottom-width : 	3px;
+	border-bottom-color : 	var(--main-text);
+}
+h3, h4{
+	padding-left : 		5px;
+	border-bottom-style : 	solid;
+	border-bottom-width : 	2px;
+	border-bottom-color : 	var(--main-text);
+}
+h5{
+	margin :		0px;
+	padding :		0px;
+	font-size :		2em;
+}
+h6{
+	margin :		0px;
+	padding :		0px;
+	font-size :		1em;
+}
+/* -----------------------------------------------------------
+	paragraph 	段落
+   ----------------------------------------------------------- */
+p{
+	text-indent :		1em;
+}
+/* -----------------------------------------------------------
+	link 		リンク
+   ----------------------------------------------------------- */
+a{
+	text-decoration : 	none;
+	color :			var(--main-a);
+}
+a:visited{ 
+	color : 		var(--main-av); 
+}
+a:hover{
+	color : 		var(--main-ah);
+	border-bottom-style :	dotted;
+	border-bottom-width :	2px;
+}
+/* -----------------------------------------------------------
+	clearfix	クリア　float:leftのクリアなど
+   ----------------------------------------------------------- */
+.clearfix::after{
+    	content : 		'';
+    	display : 		block;
+    	clear : 		both;
+}
+/* -----------------------------------------------------------
+	bold		太字
+   ----------------------------------------------------------- */
+.bold{
+	font-weight :		bold;
+}
+/* -----------------------------------------------------------
+	double uunderline	二重下線
+   ----------------------------------------------------------- */
+.uuline{
+	border-bottom-style : 	double;	
+}
+/* -----------------------------------------------------------
+	red bold	赤太字
+   ----------------------------------------------------------- */
+.bred{
+	color :			red;
+	font-weight :		bold;
+}
+/* -----------------------------------------------------------
+	rotate		回転
+   ----------------------------------------------------------- */
+.rot{
+	display:		inline-block;
+	transform : 		rotate(90deg); 
+	padding-top :		50px;
+	font-size :		120%;
+}
+/* -----------------------------------------------------------
+	affiliation	所属など
+   ----------------------------------------------------------- */
+.position{
+    	display : 		block;
+	font-weight :		bold;
+	font-size :		120%;
+	margin :		0px 0px 5px;
+	padding :		0px;
+	border-bottom-style : 	dotted;
+	border-bottom-width : 	1px;
+	border-bottom-color : 	var(--main-text);
+}
+.affiliation{
+    	display : 		block;
+	font-weight :		bold;
+	font-size :		120%;
+	margin :		0px 0px 5px;
+	padding :		0px;
+	border-bottom-style : 	dotted;
+	border-bottom-width : 	1px;
+	border-bottom-color : 	var(--main-text);
+}
+.rid{
+    	display : 		block;
+	font-weight :		bold;
+	font-size :		100%;
+	margin :		0px 0px 10px;
+	padding :		0px;
+}
+/* -----------------------------------------------------------
+	head		先頭
+   ----------------------------------------------------------- */
+.head{
+	margin :		-45px -45px 50px -45px;
+}
+.head::after{
+    	content : 		'';
+    	display : 		block;
+    	clear : 		both;
+}
+/* -----------------------------------------------------------
+	page menu		ページメニュー
+   ----------------------------------------------------------- */
+ul.pmenu{
+	position :		relative;
+	float :			left;
+	list-style-type : 	none;
+	margin :		1px 2px 1px 0px;
+	padding :		0px;
+	color :			var(--main-text);
+	background-color :	var(--main-text);
+	border-style :		solid;
+	border-width :		2px 1px;
+	border-color :		var(--main-text);
+	white-space: 		nowrap;
+}
+ul.pmenu li{
+	display : 		inline-block;
+	margin :		0px;
+	padding :		0px 3px;
+	color :			var(--main-bg);
+	background-color :	var(--main-text);
+	min-width : 		50px;
+	text-align : 		center;
+	border-left-style :	solid;
+	border-left-width :	1px;
+	border-left-color :	var(--main-text);	
+	border-right-style :	solid;
+	border-right-width :	1px;
+	border-right-color :	var(--main-text);
+}
+ul.pmenu li.select{
+	color :			var(--main-text);
+	background-color :	var(--main-text);
+	margin :		0px;
+	padding :		0px;
+	border-left-style :	solid;
+	border-left-width :	1px;
+	border-left-color :	var(--main-text);	
+	border-right-style :	solid;
+	border-right-width :	1px;
+	border-right-color :	var(--main-text);
+}
+ul.pmenu li.none{
+	margin :		0px;
+	padding :		0px 3px;
+	text-decoration : 	none;
+	border :		none;
+	color :			var(--main-text);
+	background-color :	var(--main-text);
+	min-width : 		50px;
+}
+ul.pmenu li a{
+	display :		block;
+	margin :		0px;
+	padding :		0px 3px;
+	text-decoration : 	none;
+	border :		none;
+	color :			var(--main-text);
+	background-color :	var(--main-bg);
+	min-width : 		50px;
+
+}
+ul.pmenu li a:visited{
+	text-decoration : 	none;
+	color :			#A0A0A0;
+}
+ul.pmenu li a:hover{
+	border :		none;
+	color :			#FFF;
+	background-color :	#555;
+}
+/* -----------------------------------------------------------
+	update		アップデート
+   ----------------------------------------------------------- */
+.update{
+	position :		relative;
+	float :			right;
+	margin :		0px;
+	padding :		0px 20px;
+	border-bottom-style : 	solid;
+	border-bottom-width : 	1px;
+	border-bottom-color :	#333;
+}
+/* -----------------------------------------------------------
+	id photo 	写真
+   ----------------------------------------------------------- */
+.cbox{
+	position :		relative;
+	float :			right;
+	margin : 		0px;
+	text-align :		right;
+}
+div.idphoto{
+	display :		none;
+}
+input[type=checkbox]:checked ~ div.idphoto {
+	display :		block;
+}
+/* -----------------------------------------------------------
+	address 	アドレス
+   ----------------------------------------------------------- */
+address{
+	position : 		relative;
+	float :			left;
+	margin :		20px;
+	padding :		10px;
+	border-left-style :	dotted;
+	border-left-width : 	2px;
+	border-left-color :	var(--main-text);
+	font-style :		normal;
+}
+address.id{
+	margin :		30px 20px;
+	font-size :		90%;
+	border-style :		dashed;
+	border-width : 		1px;
+	border-color :		var(--main-text);
+	font-style :		normal;
+}
+/* -----------------------------------------------------------
+	mail		メール
+   ----------------------------------------------------------- */
+.mail{
+	vertical-align : 	bottom;
+}
+/* -----------------------------------------------------------
+	QR code		QRコード
+   ----------------------------------------------------------- */
+.QR{
+	position :		relative;
+	bottom :		-990px;
+	text-align :		center;
+}
+img.qr{
+	width :			200px;
+}
+/* -----------------------------------------------------------
+	copyright	コピーライト
+   ----------------------------------------------------------- */
+.cpy{
+	position :		relative;
+	bottom :		-995px;
+	left :			-45px;
+}
+/* -----------------------------------------------------------
+	list 		リスト
+   ----------------------------------------------------------- */
+ul{
+	margin-left :		10px;
+	padding-left :		40px;
+}
+ul.none{
+	list-style-type : 	none;
+}
+ul.words{
+  	white-space: 		nowrap;
+	list-style-type :	disc;
+}
+ul.words::after{
+    	content : 		'';
+    	display : 		block;
+    	clear : 		both;
+}
+ul.words li{
+	float : 		left;
+	margin : 		0px 20px;
+}
+ol{	
+	display:		flex;
+	flex-direction:		column-reverse;
+	margin-left :		10px;
+	padding-left :		20px;
+}
+ol li{
+  	text-indent :		-1.5em; 
+	padding-left :		1.5em;
+  	list-style-type	:	none;
+  	counter-increment : 	num;
+}
+ol li::before{
+  	content :		"[" counter(num) "]";
+}
+/* -----------------------------------------------------------
+	d list 		説明リスト
+   ----------------------------------------------------------- */
+dl.history{
+	margin-left :		50px;
+	padding-left :		0px;
+}
+dl.history dt{
+  	float :			left;
+}
+dl.history dd:after{
+    	content : 		'';
+    	display : 		block;
+    	clear : 		both;
+}
+dl.history dd.md{
+  	margin-left :		80px;
+}
+dl.history dd.mdmd{
+  	margin-left :		150px;
+}
+dl.history dd.mdj{
+  	margin-left :		120px;
+}
+dl.history dd.mdmdj{
+  	margin-left :		240px;
+}
+dl.id{
+	margin:			0px;
+	padding:		0px;
+}
+dl.id dt{
+  	float :			left;
+}
+dl.id dd{
+  	margin-left :		160px;
+}
+dl.id dd:after{
+    	content : 		'';
+    	display : 		block;
+    	clear : 		both;
+}
+/* -----------------------------------------------------------
+	web		ウェブ
+   ----------------------------------------------------------- */
+.web{
+	color : 		#778899;
+}
+/* -----------------------------------------------------------
+	Menu		メニュー
+   ----------------------------------------------------------- */
+ul.menu{
+	list-style-type : 	none;
+	position : 		fixed;
+	right :			0px;
+	top :			0px;
+	margin :		0px;
+	padding :		0px;
+	width :			50px;
+	height :		100%;
+	background-color :	#333;
+	color :			#FFF;
+	opacity :		0.9;
+}
+ul.menu li{
+	display :		block;
+	margin :		0px;
+	padding :		10px;
+	width :			100%;
+	height :		100%;
+	text-align :		center;
+}	
+ul.menu li ul{ 
+	list-style-type : 	none;
+	position : 		fixed;
+	right :			0px;
+	top :			0px;
+	margin :		0px;
+	padding :		10px;
+	background-color :	#333;
+      	-webkit-transition : 	all 1s ease-in-out;
+      	-moz-transition : 	all 1s ease-in-out;
+      	-ms-transition : 	all 1s ease-in-out;
+      	-o-transition : 	all 1s ease-in-out;
+      	transition : 		all 1s ease-in-out;
+	visibility :		hidden;
+      	opacity :		0;
+	width :			210px;
+	height :		0%;
+}
+ul.menu li:hover ul{
+	visibility :		visible;
+	opacity :		1;
+	width :			210px;
+	height : 		100%;
+}
+ul.menu li ul li{ 
+	text-align :		left;
+	margin :		5px 5px 20px;
+	padding :		5px;
+	width: 			150px;
+	height:			auto;
+	border-bottom-style :	solid;
+	border-bottom-width : 	2px;
+	border-bottom-color :	#FFF;
+}
+ul.menu li ul li a {
+	display :		block;
+	text-decoration : 	none;
+	width :			100%;
+	color :			#FFF;
+}
+ul.menu li ul li a:visited { 
+	text-decoration : 	none;
+	color : 		#AAA; 
+}
+ul.menu li ul li a:hover {
+	border-bottom :		none;
+	color : 		#DDD; 
+}
+/* -----------------------------------------------------------
+	link		ページ内リンク
+   ----------------------------------------------------------- */
+#Top,#RT,#Edu,#Pub,#Pubj,#Talk,#EH,#TE,#OA,#Grants,#link{
+	padding :		3px 0px 3px 0px;
+}
+/* zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz */
+
+/* wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+
+	print 		印刷時用設定
+
+   wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww */
+@media print {
+	body {
+		margin :		0px 0px 0px 0px;
+		padding :		0px;
+		font-size : 		small;
+		background-image:	none;
+	}
+	h1{
+		font-size : 		2em;
+	}
+	h2, h3, h4{
+		margin : 		5px 0px;
+		padding-left : 		0px;
+	}
+	address{
+		position : 		relative;
+		float :			left;
+		margin :		0px;
+		padding :		5px;
+	}
+	address.id{
+		display :		none;
+	}
+	ul,ol,dl.history{
+		margin-left :		0px;
+		padding-left :		0px;
+		list-style-position :	inside;
+	}
+	dl.history dd.md{
+  		margin-left :		50px;
+	}
+	dl.history dd.mdmd{
+  		margin-left :		100px;
+	}
+	dl.history dd.mdj{
+  		margin-left :		100px;
+	}
+	dl.history dd.mdmdj{
+  		margin-left :		200px;
+	}
+	.head{
+		display :		none;
+	}
+	ul.menu{
+		display :		none;
+	}	
+	div.idphoto{
+		display :		block;
+	}
+	.web{
+		display :		none;
+	}
+	#Top,#RT,#Edu,#Pub,#Pubj,#Talk,#EH,#TE,#OA,#Grants{
+		padding :		0px;
+	}
+	#Pub,#Pubj,#TE,#OA{
+		page-break-before : 	always;
+	}
+	#Pub::before{
+		display :		block;
+		content :		"List of Research Works";
+		font-size : 		1.5em;
+		font-weight :		bold;
+		padding-left : 		0px;
+		border-bottom-style : 	double;
+		border-bottom-width : 	3px;
+		border-bottom-color : 	#111;
+	}
+	#Pubj::before{
+		display :		block;
+		content :		"研究業績一覧";
+		font-size : 		1.5em;
+		font-weight :		bold;
+		padding-left : 		0px;
+		border-bottom-style : 	double;
+		border-bottom-width : 	3px;
+		border-bottom-color : 	#111;
+	}
+	#link{
+		display :		none;
+	}
+	input{
+		visibility :		hidden;
+	}
+	.QR{
+		font-size :		x-large;
+		page-break-before : 	always;
+		position :		relative;
+		bottom :		0px;
+	}
+	.cpy{
+		display :		none;
+	}
+}
+/* zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz */
+
+/* wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+
+	スマートフォン 	スマートフォン用設定　640pxまで
+
+   wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww */
+@media screen and (max-width:640px){
+/* -----------------------------------------------------------
+	body 		ボディ
+   ----------------------------------------------------------- */
+	body{	
+		margin :		5px;
+		padding :		0px;
+		font-size : 		1em;
+}
+/* -----------------------------------------------------------
+	headline 	見出し
+   ----------------------------------------------------------- */
+	h1{
+		font-size : 		20px;
+	}
+	h2{
+		font-size : 		18px;
+		padding-left : 		0px;
+	}
+	h3, h4{
+		font-size : 		15px;
+		padding-left : 		0px;
+	}
+/* -----------------------------------------------------------
+	head		先頭
+   ----------------------------------------------------------- */
+	.head{
+		margin :		0px;
+	}
+/* -----------------------------------------------------------
+	update		アップデート
+   ----------------------------------------------------------- */
+	.update{
+		padding :		0px 5px;
+		font-size : 		0.8em;
+}
+
+/* -----------------------------------------------------------
+	id photo 	写真
+   ----------------------------------------------------------- */
+	.cbox{
+		display : 		none;
+	}
+/* -----------------------------------------------------------
+	address 	アドレス
+   ----------------------------------------------------------- */
+	address{
+		font-size : 		15px;
+	}
+
+/* -----------------------------------------------------------
+	list 		リスト
+   ----------------------------------------------------------- */
+	ul{
+		margin-left :		0px;
+		padding-left : 		20px;
+	}
+	ol{
+		margin-left :		0px;		
+		padding-left : 		0px;
+	}
+	ul.none, dl.history, dl.id{
+		margin-left :		0px;
+		padding-left :		0px;
+	}
+	dl.history dt{
+		width :			100%;
+	}
+	dl.id dt{
+		width :			100%;
+	}
+	dd, dl.history dd.md, dl.history dd.mdmd, dl.history dd.mdj, dl.history dd.mdmdj, dl.id dd{
+		margin-left : 		5px;
+		padding : 		5px;
+	}
+	ul.words li{
+		float : 		none;
+		margin : 		0px;
+	}
+/* -----------------------------------------------------------
+	Menu		メニュー
+   ----------------------------------------------------------- */
+	ul.menu{
+		display :		none;
+	}
+/* -----------------------------------------------------------
+	QR code		QRコード
+   ----------------------------------------------------------- */
+	.QR{
+		position :		relative;
+		bottom :		0px;
+	}
+/* -----------------------------------------------------------
+	copyright	コピーライト
+   ----------------------------------------------------------- */
+	.cpy{
+		position :		relative;
+		bottom :		0px;
+		left :			0px;
+	}
+/* -----------------------------------------------------------
+	section 	節
+   ----------------------------------------------------------- */
+	section{
+		margin :		0px;
+		padding :		0px;
+	}
+}
+----------------------------------------------------- */
+	section{
+		margin :		0px;
+		padding :		0px;
+	}
+}
+
+
+		padding :		0px;
+	}
+}
+
+

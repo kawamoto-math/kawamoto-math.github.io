@@ -560,6 +560,9 @@ ul.menu li ul li a:hover {
 	.cpy{
 		display :		none;
 	}
+	source{
+		visibility :		hidden;
+	}
 }
 /* zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz */
 

@@ -1,0 +1,274 @@
+/*
+	top 		基本設定				
+*/
+:root {
+  	--main-text: 		#111;
+  	--main-bg: 		#fff;
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+   		--main-text: 	#ddd;
+    		--main-bg: 	#000;
+  	}
+}
+/* -----------------------------------------------------------
+	body 		ボディ
+   ----------------------------------------------------------- */
+body{	
+	color: 			var(--main-text);
+  	background-color: 	var(--main-bg);
+  	height: 		calc(100% - 100px);
+	line-height :		1.5;
+	margin :		50px;
+	font-family : 		'Times New Roman','Arial','メイリオ', Meiryo,'ヒラギノ角ゴシック','Hiragino Sans','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+	background-image :	url("top.svg");
+	background-repeat:	no-repeat;
+	background-position :	right bottom;
+	background-attachment: 	fixed;
+	background-size:	auto auto;
+}
+article{
+	width : 		90%;
+  	max-width : 		550px;
+	position: 		absolute;
+	right:			50%;
+	bottom:			50%;
+	transform: 		translateX(50%) translateY(50%);
+	-webkit-transform: 	translateX(50%) translateY(50%);
+ 	margin : 		0px;
+	padding :		0px;
+}
+section{
+	color :			#111;
+	margin : 		20px 0px;
+	padding :		5px 10px;
+	background-color :	#EEE !important;
+	-webkit-print-color-adjust: exact;
+}
+footer{	
+	position: 		absolute;    
+	bottom:			0%;
+}
+/* -----------------------------------------------------------
+	headline 	見出し
+   ----------------------------------------------------------- */
+h2{
+	margin : 		0px 0px 10px;
+	padding : 		5px;
+	font-size : 		1.2em;
+	border-bottom-style : 	dashed;
+	border-bottom-width :	3px;
+	border-bottom-color : 	#111;
+}
+/* -----------------------------------------------------------
+	link 		リンク
+   ----------------------------------------------------------- */
+a{
+	text-decoration : 	none;
+	color :			#000080;
+}
+a:visited{ 
+	color : 		#708090; 
+}
+a:hover{
+	color : 		#0000CD;
+	border-bottom-style :	dotted;
+	border-bottom-width :	2px;
+}
+/* -----------------------------------------------------------
+	bold		太字
+   ----------------------------------------------------------- */
+.bold{
+	font-weight :		bold;
+}
+/* -----------------------------------------------------------
+	head		先頭
+   ----------------------------------------------------------- */
+.head{
+	margin :		-45px -45px 50px -45px;
+}
+.head::after{
+    	content : 		'';
+    	display : 		block;
+    	clear : 		both;
+}
+/* -----------------------------------------------------------
+	page menu		ページメニュー
+   ----------------------------------------------------------- */
+ul.pmenu{
+	position :		relative;
+	float :			left;
+	list-style-type : 	none;
+	margin :		1px 2px 1px 0px;
+	padding :		0px;
+	color :			var(--main-text);
+	background-color :	var(--main-text);
+	border-style :		solid;
+	border-width :		2px 1px;
+	border-color :		var(--main-text);
+	white-space: 		nowrap;
+}
+ul.pmenu li{
+	display : 		inline-block;
+	margin :		0px;
+	padding :		0px 3px;
+	color :			var(--main-bg);
+	background-color :	var(--main-text);
+	min-width : 		50px;
+	text-align : 		center;
+	border-left-style :	solid;
+	border-left-width :	1px;
+	border-left-color :	var(--main-text);	
+	border-right-style :	solid;
+	border-right-width :	1px;
+	border-right-color :	var(--main-text);
+}
+ul.pmenu li.select{
+	color :			var(--main-text);
+	background-color :	var(--main-text);
+	margin :		0px;
+	padding :		0px;
+	border-left-style :	solid;
+	border-left-width :	1px;
+	border-left-color :	var(--main-text);	
+	border-right-style :	solid;
+	border-right-width :	1px;
+	border-right-color :	var(--main-text);
+}
+ul.pmenu li.none{
+	margin :		0px;
+	padding :		0px 3px;
+	text-decoration : 	none;
+	border :		none;
+	color :			var(--main-text);
+	background-color :	var(--main-text);
+	min-width : 		50px;
+}
+ul.pmenu li a{
+	display :		block;
+	margin :		0px;
+	padding :		0px 3px;
+	text-decoration : 	none;
+	border :		none;
+	color :			var(--main-text);
+	background-color :	var(--main-bg);
+	min-width : 		50px;
+
+}
+ul.pmenu li a:visited{
+	text-decoration : 	none;
+	color :			#A0A0A0;
+}
+ul.pmenu li a:hover{
+	border :		none;
+	color :			#FFF;
+	background-color :	#555;
+}
+/* -----------------------------------------------------------
+	copyright	コピーライト
+   ----------------------------------------------------------- */
+.cpy{
+	display :		inline-block;
+	padding-right :		10px;
+	color:			var(--main-text);
+	background-color: 	var(--main-bg);
+	position :		relative;
+	left :			-45px;
+}
+/* wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+
+	print 		印刷時用設定
+
+   wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww */
+@media print{
+	body {	
+		background-image:	none;
+	}
+	.head{
+		display :		none;
+	}
+	header::after{
+		content: 		url("top.svg");
+	}
+}
+/* wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+
+	高さの低いブラウザ用設定
+
+   wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww */
+@media screen and (max-height:700px){
+/* -----------------------------------------------------------
+	body 		ボディ
+   ----------------------------------------------------------- */
+	article{
+		position:		relative;
+		bottom:			auto;
+		right:			auto;
+		left:			50%;
+		transform: 		translateX(-50%);
+		-webkit-transform: 	translateX(-50%);
+	}
+	footer{
+		position:		relative;
+		bottom:			auto;
+	}
+}
+/* wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+
+	スマートフォン 	スマートフォン用設定　640pxまで
+
+   wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww */
+@media screen and (max-width:640px){
+/* -----------------------------------------------------------
+	body 		ボディ
+   ----------------------------------------------------------- */
+	body{	
+		margin :		5px;
+		padding :		0px;
+		font-size : 		1em;
+	}
+	article{
+		position: 		relative;
+		left:			auto;
+  		right: 			auto;
+  		bottom: 		auto;
+  		transform:  		none;
+  		-webkit-transform: 	none;
+ 		margin : 		0px;
+		padding :		0px;
+		width : 		100%;
+  		max-width : 		550px;
+	}
+	footer{	
+		position: 		relative;
+		bottom:			auto;
+	}
+/* -----------------------------------------------------------
+	head		先頭
+   ----------------------------------------------------------- */
+	.head{
+		margin :		0px;
+	}
+/* -----------------------------------------------------------
+	Menu		メニュー
+   ----------------------------------------------------------- */
+	ul.menu{
+		display :		none;
+	}
+/* -----------------------------------------------------------
+	copyright	コピーライト
+   ----------------------------------------------------------- */
+	.cpy{
+		position :		relative;
+		bottom :		0px;
+		left :			0px;
+	}
+/* -----------------------------------------------------------
+	section 	節
+   ----------------------------------------------------------- */
+	section{
+		margin : 		20px 0px;
+		padding :		5px 10px;
+	}
+}
+/* zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz */

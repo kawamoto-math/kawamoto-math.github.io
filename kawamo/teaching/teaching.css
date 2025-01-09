@@ -510,6 +510,14 @@ ul.menu li ul li a:hover {
 	footer{
 		display :		none;
 	}
+	source::before{
+		position : 		absolute;
+		content :		url(../img/la.png);
+
+	}
+	.mail{
+		display :		none;
+	}
 }
 /* zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz */
 

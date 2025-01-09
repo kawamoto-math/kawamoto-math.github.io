@@ -486,6 +486,8 @@ ul.menu li ul li a:hover {
 		float :			left;
 		margin :		0px;
 		padding :		5px;
+		font-size : 		medium;
+
 	}
 	address.id{
 		display :		none;
@@ -522,7 +524,7 @@ ul.menu li ul li a:hover {
 	#Top,#RT,#Edu,#Pub,#Pubj,#Talk,#EH,#TE,#OA,#Grants{
 		padding :		0px;
 	}
-	#Pub,#Pubj,#TE,#OA{
+	#Pub,#Pubj,#TE,#OA,#Grants{
 		page-break-before : 	always;
 	}
 	#Pub::before{
@@ -560,8 +562,13 @@ ul.menu li ul li a:hover {
 	.cpy{
 		display :		none;
 	}
-	source{
-		visibility :		hidden;
+	source::before{
+		position : 		absolute;
+		content :		url(img/la.png);
+
+	}
+	.mail{
+		display :		none;
 	}
 }
 /* zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz */

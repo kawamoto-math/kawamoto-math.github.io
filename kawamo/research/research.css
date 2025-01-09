@@ -586,6 +586,14 @@ blockquote{
 	.math{
 		display :		none;
 	}
+	source::before{
+		position : 		relative;
+		content :		url(../img/WCabsW.png);
+
+	}
+	.wc{
+		display :		none;
+	}
 }
 /* zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz */
 

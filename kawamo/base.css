@@ -31,6 +31,11 @@ body{
 	padding :		0px 0px 950px 0px ;
 	font-family: 		'Times New Roman','Arial','メイリオ', Meiryo,'ヒラギノ角ゴシック','Hiragino Sans','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
 }
+article{
+  	max-width : 		1200px;
+	margin-right :		auto;
+	margin-left :		auto;
+}
 /* -----------------------------------------------------------
 	headline 	見出し
    ----------------------------------------------------------- */
